@@ -1,0 +1,25 @@
+<%= form_with model:[ current_user, @album] do |f| %>
+  <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+  </div>
+ <br><br><br><br>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description%>
+  </div>
+   <br><br><br><br>
+  <div>
+    <%= f.label :tag %>
+    <%= f.text_area :tag%>
+  </div>
+ <br><br><br><br>
+  <div>
+    <%= f.label :image %>
+    <%= f.file_field :images, multiple: true  %>
+  </div>
+ <br><br><br><br>
+ 
+<%= f.submit %>
+ <br><br><br><br>
+<% end %>

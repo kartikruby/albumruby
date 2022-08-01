@@ -1,0 +1,11 @@
+<h1><%= @album.name %></h1>
+
+<p><%= @album.description %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_album_path(@album) %></li>
+  <li><%= link_to "Destroy", album_path(@album), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>

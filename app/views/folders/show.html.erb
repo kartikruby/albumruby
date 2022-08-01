@@ -1,0 +1,14 @@
+
+
+<%=@folder.photos_as_thumbnail.each do |photo|%>
+
+    <%=  image_tag photo%>
+
+    <%= link_to 'Delete',delete_photo_attachment_folder_path(photo.blob.id), data: {
+                            method: :delete,
+                            confirm: "Are you sure?"
+                             }%>
+<%end%>
+<br><br><br>
+<%= link_to "Back", root_path %><br>
+</form>
