@@ -59,9 +59,9 @@ class FoldersController < ApplicationController
 
   private
 
-  # def set_user
-  #   @user = User.find(params[:user_id])
-  # end
+  def set_user
+    @user = User.find(params[:user_id])
+  end
 
   def folder_params
     params.require(:folder).permit(:name, :description, :tag, photos:[])
