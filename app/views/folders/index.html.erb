@@ -1,16 +1,20 @@
-<table>
-<tr>
+<table class="table">
+<tr class="table-dark">
 <th>Name</th> 
 <th>Description</th> 
 <th>tag</th>
+<th>Show</th>
+<th>Update</th>
+<th>Delete</th>
 </tr>
 <% @folders.each do |folder| %>
-<tr>
+<tr class="table-info">
 <td><%=folder.name%></td> 
 <td><%=folder.description%></td>
 <td><%=folder.tag%></td> 
-<td> <%=link_to "Show",folder_path(folder.id)%></td>
-<td><%=link_to "Update",edit_folder_path(folder.id )%></td>
+
+<td > <%=link_to "Show",folder_path(folder.id) %></td>
+<td ><%=link_to "Update",edit_folder_path(folder.id )%></td>
 <td><%=link_to "DeleteAlbum",folder_path(folder.id),data: {
                             turbo_method: :delete,
                             turbo_confirm: "Are you sure?"
