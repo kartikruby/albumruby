@@ -2,7 +2,7 @@
 
 <%@folder.photos.each do |photo|%>
 
-    <%=  image_tag photo %>
+    <%=  image_tag photo , style: "max-width: 100%; max-height: 200px"%>
 
     <%= button_to 'Delete',delete_photo_attachment_folder_path(photo.blob.id), 
                             method: :delete
