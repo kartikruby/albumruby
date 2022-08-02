@@ -1,5 +1,5 @@
 class FoldersController < ApplicationController
-  before_action :set_user, only: %i[create show edit destroy update]
+  # before_action :set_user, only: %i[create show edit destroy update]
 
   def index
     @user = current_user
@@ -59,9 +59,9 @@ class FoldersController < ApplicationController
 
   private
 
-  def set_user
-    @user = User.find(params[:user_id])
-  end
+  # def set_user
+  #   @user = User.find(params[:user_id])
+  # end
 
   def folder_params
     params.require(:folder).permit(:name, :description, :tag, photos:[])
