@@ -9,6 +9,7 @@ class FoldersController < ApplicationController
   
 
   def show
+    
     @folder = Folder.find(params[:id])
   end
 
@@ -50,7 +51,7 @@ class FoldersController < ApplicationController
   def delete_photo_attachment
     
     # image=params[:photo]
-    @photo = ActiveStorage::Blob.find(params[:id])
+    @photo = ActiveStorage::Attachment.find(params[:id])
     @photo.purge
    
      redirect_back(fallback_location: folder_path(params[:id]))
