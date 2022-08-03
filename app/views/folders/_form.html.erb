@@ -1,24 +1,24 @@
 <%= form_with model: @folder do |f| %>
-  <div>
-        <%= f.label :name %>
+  <div class="col" >
+        <%= f.label :name,class:"form-control"  %>
         <%= f.text_field :name %>
   </div>
  <br><br><br><br>
-  <div>
-    <%= f.label :description %>
+  <div class="col" >
+    <%= f.label :description,class:"form-control"  %>
     <%= f.text_area :description%>
   </div>
    <br><br><br><br>
-  <div>
-    <%= f.label :tag %>
+  <div class="col">
+    <%= f.label :tag,class:"form-control" %>
     <%= f.text_area :tag%>
   </div>
  <br><br><br><br>
-  <div>
-    <%= f.label :photos%>
+  <div class="col">
+    <%= f.label :photos,class:"form-control" %>
     <%= f.file_field :photos, multiple: true  %>
   </div>
- <br><br><br><br>
+ <br><br>
   <%= f.submit %>
 <% end %> 
- <br><br><br><br>
+ <br><br>
